@@ -30,7 +30,7 @@ public class fallingTrap : MonoBehaviour {
             }
         }else
         {
-            Destroy(this.gameObject,0.04f);
+            Destroy(this.gameObject,0.025f);
         }
     }
 }

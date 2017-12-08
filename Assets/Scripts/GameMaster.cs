@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour {
 
     public GameObject theFinishLine;
+
+    public GameObject pauseScreen;
+
+    public GameObject optionsScreen;
 
     private void Start()
     {
@@ -26,6 +29,10 @@ public class GameMaster : MonoBehaviour {
         {
             loadNextLevel();
         }
+        if (Input.GetButtonDown("Cancel") && optionsScreen.active == false)
+        {
+            Toggle();
+        }
 	}
 
     public void restartLevel()
@@ -38,5 +45,22 @@ public class GameMaster : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void Toggle()
+    {
+        pauseScreen.SetActive(!pauseScreen.activeSelf);
+
+        if (pauseScreen.activeSelf)
+        {
+            Time.timeScale = 0f;
+        }else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void toMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 }
