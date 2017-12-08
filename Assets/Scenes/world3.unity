@@ -1350,6 +1350,11 @@ Prefab:
       propertyPath: pauseScreen
       value: 
       objectReference: {fileID: 1995426845}
+    - target: {fileID: 114484812908488610, guid: 4faa079082d50404fb8e29ee3b1e00c6,
+        type: 2}
+      propertyPath: optionsScreen
+      value: 
+      objectReference: {fileID: 1995426847}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4faa079082d50404fb8e29ee3b1e00c6, type: 2}
   m_IsPrefabParent: 0
@@ -6242,6 +6247,10 @@ Prefab:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 1659399928455390, guid: e08e3ab54e233418db9d43d5d28626c7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e08e3ab54e233418db9d43d5d28626c7, type: 2}
   m_IsPrefabParent: 0
@@ -6256,6 +6265,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1995426844}
   m_Script: {fileID: 11500000, guid: b89b46264f981bb469ca6c9611757016, type: 3}
+--- !u!1 &1995426847 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1659399928455390, guid: e08e3ab54e233418db9d43d5d28626c7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1995426844}
 --- !u!1 &2056010979
 GameObject:
   m_ObjectHideFlags: 0
