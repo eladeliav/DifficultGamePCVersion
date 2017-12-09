@@ -24,6 +24,10 @@ public class GameMaster : MonoBehaviour {
         if (theFinishLine == null)
         {
             theFinishLine = GameObject.FindGameObjectWithTag("FinishLine");
+            if(theFinishLine == null)
+            {
+                theFinishLine = GameObject.Find("invisFinishLine");
+            }
         }
         if (Input.GetButtonDown("Restart"))
         {
