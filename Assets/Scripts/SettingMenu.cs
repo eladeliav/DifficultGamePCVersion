@@ -10,6 +10,8 @@ public class SettingMenu : MonoBehaviour {
 
     public Slider volumeSlider;
 
+    public Toggle fullScreenToggle;
+
     Resolution[] resolutions;
     
     public Dropdown resolutionDropdown;
@@ -26,6 +28,14 @@ public class SettingMenu : MonoBehaviour {
         float realVolume;
         audioMixer.GetFloat("volume", out realVolume);
         volumeSlider.value = realVolume;
+
+        if (Screen.fullScreen)
+        {
+            fullScreenToggle.isOn = true;
+        }else
+        {
+            fullScreenToggle.isOn = false;
+        }
         
 
         resolutions = Screen.resolutions;
