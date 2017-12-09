@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/world5.unity
     guid: daa3cb935140e4451b7f2d7d35c07d73
+  - enabled: 1
+    path: Assets/Scenes/world6.unity
+    guid: 709ff07ed739d87458db4d328270ca32

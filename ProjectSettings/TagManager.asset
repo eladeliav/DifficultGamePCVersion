@@ -9,6 +9,7 @@ TagManager:
   - InvisibleTrap
   - Platform
   - FinishLine
+  - Borders
   layers:
   - Default
   - TransparentFX

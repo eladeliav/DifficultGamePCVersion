@@ -8,7 +8,7 @@ public class fallingTrapTrigger : MonoBehaviour {
 
     public float fallSpeed = 10f;
 
-    public GameObject[] borders;
+    public GameObject[] borders = new GameObject[0];
 
     private void Awake()
     {
@@ -17,7 +17,12 @@ public class fallingTrapTrigger : MonoBehaviour {
 
     private void Update()
     {
-        if(theFallingTrap != null)
+        if(borders == null)
+        {
+            borders = GameObject.FindGameObjectsWithTag("Borders");
+        }
+
+        if(theFallingTrap != null && borders != null)
         {
             for(int i = 0; i < borders.Length; i++)
             {

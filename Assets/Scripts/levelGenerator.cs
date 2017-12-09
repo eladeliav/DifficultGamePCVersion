@@ -8,6 +8,9 @@ public class levelGenerator : MonoBehaviour {
 
     public colorToPrefab[] colorMappings;
 
+    [SerializeField]
+    private GameObject spikePrefab;
+
     private void Start()
     {
         GenerateLevel();
@@ -31,8 +34,16 @@ public class levelGenerator : MonoBehaviour {
 
         foreach(colorToPrefab colorMapping in colorMappings){
             if(colorMapping.color.Equals(pixelColor)){
-                Vector2 pos = new Vector2(x, y);
-                Instantiate(colorMapping.prefab, pos, Quaternion.identity, transform);
+                if(colorMapping.prefab.Equals(spikePrefab))
+                {
+                    Vector3 pos = new Vector3(x - 20, y - 8.78f,10);
+                    Instantiate(colorMapping.prefab, pos, Quaternion.identity, transform);
+                }
+                else
+                {
+                    Vector2 pos = new Vector2(x - 20, y - 10);
+                    Instantiate(colorMapping.prefab, pos, Quaternion.identity, transform);
+                }
             }
         }
 

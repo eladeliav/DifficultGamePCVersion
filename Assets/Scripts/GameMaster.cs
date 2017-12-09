@@ -21,6 +21,10 @@ public class GameMaster : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (theFinishLine == null)
+        {
+            theFinishLine = GameObject.FindGameObjectWithTag("FinishLine");
+        }
         if (Input.GetButtonDown("Restart"))
         {
             restartLevel();
