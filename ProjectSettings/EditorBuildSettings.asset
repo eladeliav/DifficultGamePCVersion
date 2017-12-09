@@ -29,3 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/world7.unity
     guid: 7065444232d865d42ad31fcfc73d7a37
+  - enabled: 1
+    path: Assets/Scenes/world8.unity
+    guid: 82bb954ee07d9420daf78b6012f641d1

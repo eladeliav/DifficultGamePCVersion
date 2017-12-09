@@ -330,22 +330,24 @@ MonoBehaviour:
   - color: {r: 0, g: 1, b: 0, a: 1}
     prefab: {fileID: 1006546327572556, guid: 88fa5a67bdaf98a4889d1eedb946acac, type: 2}
   - color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
-    prefab: {fileID: 1786069173201732, guid: b7a1c7c98a504ca47a84cde9a2cc7857, type: 2}
+    prefab: {fileID: 1786069173201732, guid: 2bf601242aa0ccf40be35ca5d20eb304, type: 2}
   - color: {r: 0, g: 0, b: 1, a: 1}
     prefab: {fileID: 1320649157524294, guid: e89c84562f91d4eb4a8c46f08f864e94, type: 2}
-  - color: {r: 0, g: 0, b: 0.4, a: 1}
-    prefab: {fileID: 1896323629146306, guid: 2f0ddc129d6e0c74da1f752577740301, type: 2}
   - color: {r: 1, g: 0, b: 1, a: 1}
-    prefab: {fileID: 1579505261230858, guid: 9fd3093b2e1593e4284eb8f322e3c311, type: 2}
+    prefab: {fileID: 1579505261230858, guid: 7a4824d08ae3c684db27a90e160ef7d9, type: 2}
   - color: {r: 0.4, g: 0, b: 0.6, a: 1}
     prefab: {fileID: 1202738837886312, guid: 7f43341c8160a7a449074fc142c6b69d, type: 2}
   - color: {r: 1, g: 0.6, b: 0, a: 1}
     prefab: {fileID: 1320649157524294, guid: ea5e2ec1f6c373347975952b699101cf, type: 2}
   - color: {r: 0.2, g: 1, b: 1, a: 1}
-    prefab: {fileID: 1896323629146306, guid: b2b888757a90ece499bca7336f618edd, type: 2}
+    prefab: {fileID: 1028903577987016, guid: 5b8485fe1fe2cff4884795acea1f8cee, type: 2}
   spikePrefab: {fileID: 1786069173201732, guid: b7a1c7c98a504ca47a84cde9a2cc7857,
     type: 2}
   invisSpikePrefab: {fileID: 1579505261230858, guid: 9fd3093b2e1593e4284eb8f322e3c311,
+    type: 2}
+  spikePrefabSmall: {fileID: 1786069173201732, guid: 2bf601242aa0ccf40be35ca5d20eb304,
+    type: 2}
+  invisSpikePrefabSmall: {fileID: 1579505261230858, guid: 7a4824d08ae3c684db27a90e160ef7d9,
     type: 2}
 --- !u!1001 &409430212
 Prefab:
@@ -360,7 +362,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.71
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 87a2357765801c34292d6718d8b4d770, type: 2}
       propertyPath: m_LocalPosition.z
@@ -922,12 +924,12 @@ Prefab:
     - target: {fileID: 224950084017161302, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 375.5
+      value: 613.5
       objectReference: {fileID: 0}
     - target: {fileID: 224950084017161302, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 168
+      value: 283
       objectReference: {fileID: 0}
     - target: {fileID: 224950084017161302, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
