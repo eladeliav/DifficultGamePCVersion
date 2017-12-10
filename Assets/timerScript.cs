@@ -39,6 +39,14 @@ public class timerScript : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        if(optionsScreen == null)
+        {
+            optionsScreen = GameObject.FindGameObjectWithTag("OptionsMenu");
+        }
+        if (timeText == null)
+        {
+            timeText = GameObject.FindGameObjectWithTag("TheTimerText");
+        }
         currentTime = stopWatch.ElapsedMilliseconds + lastSavedTime;
         if(timeText != null)
         {

@@ -1740,17 +1740,17 @@ Prefab:
     - target: {fileID: 224900135203296626, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 143.56313
+      value: 921.0788
       objectReference: {fileID: 0}
     - target: {fileID: 224886586646387226, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 152.7132
+      value: 930.2289
       objectReference: {fileID: 0}
     - target: {fileID: 224550843918874966, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -85.2632
+      value: -862.7789
       objectReference: {fileID: 0}
     - target: {fileID: 224325502662595406, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
@@ -1765,7 +1765,7 @@ Prefab:
     - target: {fileID: 224254980393159874, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 171.7032
+      value: 949.2189
       objectReference: {fileID: 0}
     - target: {fileID: 224232369663956060, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
@@ -1775,7 +1775,7 @@ Prefab:
     - target: {fileID: 224232369663956060, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 133.2632
+      value: 910.7789
       objectReference: {fileID: 0}
     - target: {fileID: 114619197689538826, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
@@ -1810,12 +1810,12 @@ Prefab:
     - target: {fileID: 114029455665238026, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114029455665238026, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224915645625792936, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
@@ -1825,50 +1825,17 @@ Prefab:
     - target: {fileID: 224915645625792936, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 171.7132
+      value: 949.2289
       objectReference: {fileID: 0}
     - target: {fileID: 114958085452532476, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114958085452532476, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741991143621178, guid: e08e3ab54e233418db9d43d5d28626c7, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1440155798216832, guid: e08e3ab54e233418db9d43d5d28626c7, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114311705834480968, guid: e08e3ab54e233418db9d43d5d28626c7,
-        type: 2}
-      propertyPath: m_text
-      value: Level 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114311705834480968, guid: e08e3ab54e233418db9d43d5d28626c7,
-        type: 2}
-      propertyPath: m_textInfo.characterCount
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114311705834480968, guid: e08e3ab54e233418db9d43d5d28626c7,
-        type: 2}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114311705834480968, guid: e08e3ab54e233418db9d43d5d28626c7,
-        type: 2}
-      propertyPath: m_textInfo.spaceCount
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114311705834480968, guid: e08e3ab54e233418db9d43d5d28626c7,
-        type: 2}
-      propertyPath: m_textAlignment
-      value: 513
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e08e3ab54e233418db9d43d5d28626c7, type: 2}
