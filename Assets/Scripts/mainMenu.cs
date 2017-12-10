@@ -5,8 +5,17 @@ public class mainMenu : MonoBehaviour {
 
     private int currentProgressLevel;
 
+    public bool playedBefore;
+
     private void Awake()
     {
+        playedBefore = ArrayPrefs2.GetBool("PlayedBefore");
+        if(playedBefore == false)
+        {
+            playedBefore = true;
+            ArrayPrefs2.SetBool("PlayedBefore", true);
+            ResetProgress();
+        }
         currentProgressLevel = PlayerPrefs.GetInt("CurrentLevelProgress");
     }
 

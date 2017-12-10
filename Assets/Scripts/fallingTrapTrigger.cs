@@ -8,7 +8,7 @@ public class fallingTrapTrigger : MonoBehaviour {
 
     public float fallSpeed = 10f;
 
-    public GameObject[] borders = new GameObject[0];
+    public GameObject[] borders;
 
     private void Awake()
     {
@@ -17,16 +17,21 @@ public class fallingTrapTrigger : MonoBehaviour {
 
     private void Update()
     {
-        if(borders == null)
+        if(borders.Length == 0)
         {
+            /*for(int i = 0;i < borders.Length; i++)
+            {
+                borders[i] = GameObject.FindGameObjectWithTag("Borders");
+            }*/
             borders = GameObject.FindGameObjectsWithTag("Borders");
+
         }
 
         if(theFallingTrap != null && borders != null)
         {
             for(int i = 0; i < borders.Length; i++)
             {
-            Physics2D.IgnoreCollision(theFallingTrap.GetComponent<PolygonCollider2D>(), borders[i].GetComponent<BoxCollider2D>());
+                Physics2D.IgnoreCollision(theFallingTrap.GetComponent<PolygonCollider2D>(), borders[i].GetComponent<BoxCollider2D>());
             }
         }
         

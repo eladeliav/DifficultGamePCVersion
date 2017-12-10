@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8805774e065a3544898f45b5aa3b69ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playedBefore: 0
 --- !u!1001 &247089701
 Prefab:
   m_ObjectHideFlags: 0
@@ -740,7 +741,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1225248870}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -766,7 +767,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Version 0.08
+  m_text: Version 0.09
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
@@ -3213,8 +3214,8 @@ RectTransform:
   m_Children:
   - {fileID: 1994009208}
   - {fileID: 243931618}
-  - {fileID: 101156807}
   - {fileID: 347593864}
+  - {fileID: 101156807}
   - {fileID: 1489139153}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -3717,7 +3718,7 @@ Prefab:
     - target: {fileID: 224372223483315916, guid: 304d7296671e2bc449c0b380d5bafc42,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224372223483315916, guid: 304d7296671e2bc449c0b380d5bafc42,
         type: 2}
@@ -3927,12 +3928,12 @@ Prefab:
     - target: {fileID: 114249276053810078, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
       propertyPath: m_havePropertiesChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114249276053810078, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114105817529648588, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
@@ -3942,17 +3943,17 @@ Prefab:
     - target: {fileID: 224047730704343882, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.99999994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224047730704343882, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.99999994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224047730704343882, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.99999994
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1076769541146726, guid: ce75e5914601aab4fa9d9fdda4291a42, type: 2}
       propertyPath: m_Name
@@ -3996,7 +3997,7 @@ Prefab:
     - target: {fileID: 114249276053810078, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
       propertyPath: m_firstOverflowCharacterIndex
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114105817529648588, guid: ce75e5914601aab4fa9d9fdda4291a42,
         type: 2}
