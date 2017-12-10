@@ -13,35 +13,49 @@ public class timerScript : MonoBehaviour {
 
     private long lastSavedTime;
 
+    public long fastestTimeScore;
+
+    public long finalRunTime;
+
     [SerializeField]
     private GameObject optionsScreen;
 	
     private void Awake()
     {
-        UnityEngine.Debug.Log(PlayerPrefs.GetString("savedTime"));
-
-        long.TryParse(PlayerPrefs.GetString("savedTime"), out lastSavedTime);
-        UnityEngine.Debug.Log(lastSavedTime);
+        DontDestroyOnLoad(transform.gameObject);
+        fastestTimeScore = ArrayPrefs2.GetLong("highScoreTime");
+        lastSavedTime = ArrayPrefs2.GetLong("savedTime");
     }
 
     private void Start()
     {
-
         timeText.GetComponent<TextMeshProUGUI>().SetText("Time: " + currentTime / 1000);
         stopWatch.Start();
     }
 
     void Update()
     {
+        if (timeText == null || optionsScreen == null)
+        {
+            Destroy(this.gameObject);
+        }
         currentTime = stopWatch.ElapsedMilliseconds + lastSavedTime;
-        timeText.GetComponent<TextMeshProUGUI>().SetText("Time: " + currentTime / 1000);
+        if(timeText != null)
+        {
+            timeText.GetComponent<TextMeshProUGUI>().SetText("Time: " + currentTime / 1000);
+        }
         if (Input.GetButtonDown("Restart"))
         {
-            PlayerPrefs.SetString("savedTime", currentTime.ToString());
+            ArrayPrefs2.SetLong("savedTime", currentTime);
+            stopWatch.Start();
         }
-        if (Input.GetButtonDown("Cancel") && optionsScreen.active == false)
+        if(finalRunTime > 0)
         {
-            stopWatch.Stop();
+            ArrayPrefs2.SetLong("finalCurrentRunTime", finalRunTime);
+        }
+        if(finalRunTime > ArrayPrefs2.GetLong("highScoreTime"))
+        {
+            ArrayPrefs2.SetLong("highScoreTime", finalRunTime);
         }
     }
 

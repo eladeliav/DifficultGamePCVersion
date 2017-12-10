@@ -11,9 +11,15 @@ public class GameMaster : MonoBehaviour {
 
     public GameObject optionsScreen;
 
+    public GameObject theTimer;
+
 
     private void Start()
     {
+        if (theTimer == null)
+        {
+            theTimer = GameObject.FindGameObjectWithTag("TheTimer");
+        }
 
         // = PlayerPrefs.GetString("savedTime");
         if (theFinishLine == null)
@@ -24,6 +30,10 @@ public class GameMaster : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (theTimer == null)
+        {
+            theTimer = GameObject.FindGameObjectWithTag("TheTimer");
+        }
         if (theFinishLine == null)
         {
             theFinishLine = GameObject.FindGameObjectWithTag("FinishLine");
@@ -53,14 +63,16 @@ public class GameMaster : MonoBehaviour {
 
     public void loadNextLevel()
     {
-        if ((SceneManager.GetActiveScene().buildIndex + 1) >= SceneManager.sceneCountInBuildSettings)
+        if ((SceneManager.GetActiveScene().buildIndex + 1) > SceneManager.sceneCountInBuildSettings)
         {
+
             SceneManager.LoadScene(0);
         }
         else
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        theTimer.GetComponent<timerScript>().stopWatch.Start();
     }
 
     public void Toggle()
@@ -70,9 +82,11 @@ public class GameMaster : MonoBehaviour {
         if (pauseScreen.activeSelf)
         {
             Time.timeScale = 0f;
+            theTimer.GetComponent<timerScript>().stopWatch.Stop();
         }else
         {
             Time.timeScale = 1f;
+            theTimer.GetComponent<timerScript>().stopWatch.Start();
         }
     }
 

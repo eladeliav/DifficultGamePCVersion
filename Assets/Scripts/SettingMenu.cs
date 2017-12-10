@@ -27,14 +27,22 @@ public class SettingMenu : MonoBehaviour {
     {
         float realVolume;
         audioMixer.GetFloat("volume", out realVolume);
-        volumeSlider.value = realVolume;
+        if(volumeSlider != null)
+        {
+            volumeSlider.value = realVolume;
+        }
+        
 
-        if (Screen.fullScreen)
+        if(fullScreenToggle != null)
         {
-            fullScreenToggle.isOn = true;
-        }else
-        {
-            fullScreenToggle.isOn = false;
+            if (Screen.fullScreen)
+            {
+                fullScreenToggle.isOn = true;
+            }
+            else
+            {
+                fullScreenToggle.isOn = false;
+            }
         }
         
 

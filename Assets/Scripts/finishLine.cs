@@ -18,8 +18,17 @@ public class finishLine : MonoBehaviour {
         {
             collision.gameObject.GetComponent<Player>().beatCurrentLevel();
             didBeatLevel = true;
-            currentProgressLevel = SceneManager.GetActiveScene().buildIndex + 1;
-            PlayerPrefs.SetInt("CurrentLevelProgress",currentProgressLevel);
+            if ((SceneManager.GetActiveScene().buildIndex + 1) >= SceneManager.sceneCountInBuildSettings)
+            {
+                currentProgressLevel = SceneManager.GetActiveScene().buildIndex;
+                PlayerPrefs.SetInt("CurrentLevelProgress", currentProgressLevel);
+            }else
+            {
+                currentProgressLevel = SceneManager.GetActiveScene().buildIndex + 1;
+                PlayerPrefs.SetInt("CurrentLevelProgress", currentProgressLevel);
+            }
+                
+
         }
     }
 

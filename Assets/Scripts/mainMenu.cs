@@ -24,8 +24,16 @@ public class mainMenu : MonoBehaviour {
 
     public void ResetProgress(){
         PlayerPrefs.SetInt("CurrentLevelProgress",1);
+        ArrayPrefs2.SetLong("finalCurrentRunTime", 0);
         PlayerPrefs.SetInt("TotalDeaths",0);
+        ArrayPrefs2.SetLong("savedTime", 0);
         currentProgressLevel = PlayerPrefs.GetInt("CurrentLevelProgress");
+    }
+
+    public void toScorePage()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
     }
 
 }

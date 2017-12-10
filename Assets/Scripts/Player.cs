@@ -14,11 +14,17 @@ public class Player : MonoBehaviour {
 
     public GameObject deathsCounter;
 
+    public GameObject theTimer;
+
     [SerializeField]
     private GameObject gameMaster;
 
     // Use this for initialization
     void Start () {
+        if (theTimer == null)
+        {
+            theTimer = GameObject.FindGameObjectWithTag("TheTimer");
+        }
         if(deathsCounter == null){
             Debug.Log("don't have a deaths counter set on " + gameObject.name);
         }
@@ -40,10 +46,18 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private void Update()
+    {
+        if (theTimer == null)
+        {
+            theTimer = GameObject.FindGameObjectWithTag("TheTimer");
+        }
+    }
+
     public void GameOver()
     {
+        theTimer.GetComponent<timerScript>().stopWatch.Stop();
         Debug.Log("Game Over");
-
         GetComponent<SpriteRenderer>().enabled = false;
         audioM.PlaySound("Explosion");
         Transform newParticles = Instantiate(deathParticles.transform, transform.position, Quaternion.identity);
@@ -55,7 +69,8 @@ public class Player : MonoBehaviour {
 
     public void beatCurrentLevel()
     {
-        //gameMaster.GetComponent<GameMaster>().stopWatch.Stop();
+        theTimer.GetComponent<timerScript>().stopWatch.Stop();
+        ArrayPrefs2.SetLong("savedTime",theTimer.GetComponent<timerScript>().currentTime);
         Debug.Log("Beat Level");
         GetComponent<SpriteRenderer>().enabled = false;
         audioM.PlaySound("Explosion");
@@ -63,6 +78,11 @@ public class Player : MonoBehaviour {
         Destroy(newParticles.gameObject, 3f);
         Destroy(this.gameObject);
         winScreen.SetActive(true);
+        if ((SceneManager.GetActiveScene().buildIndex + 1) >= SceneManager.sceneCountInBuildSettings - 1)
+        {
+            theTimer.GetComponent<timerScript>().stopWatch.Stop();
+            theTimer.GetComponent<timerScript>().finalRunTime = theTimer.GetComponent<timerScript>().currentTime;
+        }
     }
 
 }

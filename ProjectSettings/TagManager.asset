@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - FinishLine
   - Borders
+  - TheTimer
   layers:
   - Default
   - TransparentFX
