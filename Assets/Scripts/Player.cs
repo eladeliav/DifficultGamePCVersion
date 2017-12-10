@@ -12,11 +12,17 @@ public class Player : MonoBehaviour {
 
     private AudioManager audioM;
 
+    public GameObject deathsCounter;
+
     [SerializeField]
     private GameObject gameMaster;
 
     // Use this for initialization
     void Start () {
+        if(deathsCounter == null){
+            Debug.Log("don't have a deaths counter set on " + gameObject.name);
+        }
+
 		if(deathParticles == null)
         {
             Debug.LogWarning("no death particles for player");
@@ -43,7 +49,7 @@ public class Player : MonoBehaviour {
         Transform newParticles = Instantiate(deathParticles.transform, transform.position, Quaternion.identity);
         Destroy(newParticles.gameObject, 3f);
         Destroy(this.gameObject);
-
+        deathsCounter.GetComponent<DeathsCounter>().addToTotalDeaths();
         gameOverScreen.SetActive(true);
     }
 

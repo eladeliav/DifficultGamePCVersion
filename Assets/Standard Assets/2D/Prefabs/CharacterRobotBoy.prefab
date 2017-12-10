@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.555752, y: -7.029073, z: 0}
+  m_LocalPosition: {x: -11.476842, y: -3.7731426, z: 0}
   m_LocalScale: {x: 1.7715329, y: 1.7715304, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -269,4 +269,5 @@ MonoBehaviour:
   deathParticles: {fileID: 100010, guid: 645413a00f7bd0242bbd6d0e5eb6f439, type: 2}
   gameOverScreen: {fileID: 0}
   winScreen: {fileID: 0}
+  deathsCounter: {fileID: 0}
   gameMaster: {fileID: 0}
