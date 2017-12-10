@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Diagnostics;
+using TMPro;
 
 public class GameMaster : MonoBehaviour {
 
@@ -11,8 +11,11 @@ public class GameMaster : MonoBehaviour {
 
     public GameObject optionsScreen;
 
+
     private void Start()
     {
+
+        // = PlayerPrefs.GetString("savedTime");
         if (theFinishLine == null)
         {
             theFinishLine = GameObject.FindGameObjectWithTag("FinishLine");

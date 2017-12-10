@@ -55,8 +55,8 @@ public class Player : MonoBehaviour {
 
     public void beatCurrentLevel()
     {
+        //gameMaster.GetComponent<GameMaster>().stopWatch.Stop();
         Debug.Log("Beat Level");
-
         GetComponent<SpriteRenderer>().enabled = false;
         audioM.PlaySound("Explosion");
         Transform newParticles = Instantiate(deathParticles.transform, transform.position, Quaternion.identity);
