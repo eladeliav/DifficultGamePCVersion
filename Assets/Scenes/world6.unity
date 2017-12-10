@@ -337,6 +337,9 @@ MonoBehaviour:
     prefab: {fileID: 1896323629146306, guid: 2f0ddc129d6e0c74da1f752577740301, type: 2}
   spikePrefab: {fileID: 1786069173201732, guid: b7a1c7c98a504ca47a84cde9a2cc7857,
     type: 2}
+  invisSpikePrefab: {fileID: 0}
+  spikePrefabSmall: {fileID: 0}
+  invisSpikePrefabSmall: {fileID: 0}
 --- !u!1001 &409430212
 Prefab:
   m_ObjectHideFlags: 0
@@ -912,12 +915,12 @@ Prefab:
     - target: {fileID: 224950084017161302, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 613.5
+      value: 375.5
       objectReference: {fileID: 0}
     - target: {fileID: 224950084017161302, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 283
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 224950084017161302, guid: e08e3ab54e233418db9d43d5d28626c7,
         type: 2}
