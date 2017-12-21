@@ -61,10 +61,11 @@ public class timerScript : MonoBehaviour {
         {
             ArrayPrefs2.SetLong("finalCurrentRunTime", finalRunTime);
         }
-        if(finalRunTime > ArrayPrefs2.GetLong("highScoreTime"))
+        if(finalRunTime < ArrayPrefs2.GetLong("highScoreTime"))
         {
             ArrayPrefs2.SetLong("highScoreTime", finalRunTime);
         }
+        //System.out.println("fuck yoav");
     }
 
 }
