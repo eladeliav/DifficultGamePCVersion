@@ -61,10 +61,11 @@ public class Player : MonoBehaviour {
         GetComponent<SpriteRenderer>().enabled = false;
         audioM.PlaySound("Explosion");
         Transform newParticles = Instantiate(deathParticles.transform, transform.position, Quaternion.identity);
-        Destroy(newParticles.gameObject, 3f);
-        Destroy(this.gameObject);
         deathsCounter.GetComponent<DeathsCounter>().addToTotalDeaths();
         gameOverScreen.SetActive(true);
+        Destroy(newParticles.gameObject, 3f);
+        Destroy(this.gameObject);
+
     }
 
     public void beatCurrentLevel()
