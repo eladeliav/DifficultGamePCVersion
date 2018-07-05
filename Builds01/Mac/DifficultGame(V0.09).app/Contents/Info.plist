@@ -12,7 +12,7 @@
 	<key>CFBundleExecutable</key>
 	<string>DifficultGame(V0.09)</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Unity Player version 2017.2.0f3 (46dda1414e51). (c) 2017 Unity Technologies ApS. All rights reserved.</string>
+	<string>Unity Player version 2018.1.1f1 (b8cbb5de9840). (c) 2018 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -38,7 +38,7 @@
 	<key>NSPrincipalClass</key>
 	<string>PlayerApplication</string>
 	<key>UnityBuildNumber</key>
-	<string>46dda1414e51</string>
+	<string>b8cbb5de9840</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9.0</string>
 </dict>
